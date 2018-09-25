@@ -22,6 +22,10 @@ void ejemDos(){
 }
 
 void ejemTres(){
+
+}
+
+void ejemCuatro(){
 	
 }
 
