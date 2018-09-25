@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string> 
 
 void ejemUno(){
 	int alumnos, auxiliar=0, nota, promedio, cont=0;
@@ -95,7 +96,37 @@ void ejemTres(){
 }
 
 void ejemCuatro(){
-	printf("%f\n", 50/0.25);
+	int venta, deposito, opcion;
+	float total=0, iva;
+	char moneda[10];
+	printf("Ingrese el porcentaje de IVA: ");
+	scanf("%f", &iva);
+	iva = 100/iva;
+	printf("Ingrese el tipo de moneda:");
+	scanf("%s", moneda);
+	do
+	{
+		printf("---MENU---\n1.Registrar venta.\n2.Total de ventas en caja.\n3.Salir.\nElejir opcion: ");
+		scanf("%d", &opcion);
+		switch(opcion){
+			case 1: {
+				printf("Ingrese el monto de la venta: ");
+				scanf("%d", &venta);
+				printf("El total a pagar con iva es: %f %s.\nIngrese el pago del cliente: ", ((venta/iva)+venta), moneda);
+				scanf("%d", &deposito);
+				if (deposito>((venta/iva)+venta))
+				{
+					printf("Cambio de %f %s.\n", (deposito-((venta/iva)+venta)), moneda);
+				}
+				printf("Venta concluida con exito!\n");
+				total += ((venta/iva)+venta);
+			} break;
+			case 2: printf("El total de ventas es: %f %s.\n", total, moneda); break;
+			case 3: break;
+			default: printf("Opcion no valida."); break;
+		}
+	} while (opcion!=3);
+	// printf("%f\n", 50*0.5);
 }
 
 main(){
