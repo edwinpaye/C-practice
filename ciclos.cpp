@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string> 
+#include <cstring>
 
 void ejemUno(){
 	int alumnos, auxiliar=0, nota, promedio, cont=0;
@@ -170,37 +171,58 @@ void ejemCinco(){
 }
 
 void ejemSeis(){
-	int tarjetas, edad, auxiliar;
-	char estadoCivil, sexo;
+	int tarjetas, edad, auxiliar, estadoCivil, sexo;
 	printf("Ingrese la cantidad de tarjetas: ");
 	scanf("%d", &tarjetas);
 	auxiliar = tarjetas;
 	int numCenso[auxiliar];
 	bool elejir[auxiliar];
 	for (int i = 0; i < auxiliar; ++i){
-		// system("cls");
 		printf("Ingrese el numero de censo: ");
 		scanf("%d", &numCenso[i]);
-		printf("Ingrese el sexo: ");
-		scanf("%s", &sexo);
+		printf("Ingrese el sexo\n1.M\n2.F\nOpcion: ");
+		scanf("%d", &sexo);
 		printf("Ingrese la edad: ");
 		scanf("%d", &edad);
-		printf("Estado civil\na.Soltero\nb.Casado\nc.Viudo\nd.Divorciado\nOpcion: ");
-		scanf("%s", &estadoCivil);
-		if (edad>15&&edad<22&&estadoCivil=='a'&&sexo=='f'){
+		printf("Estado civil\n1.Soltero\n2.Casado\n3.Viudo\n4.Divorciado\nOpcion: ");
+		scanf("%d", &estadoCivil);
+		if (estadoCivil==1&&sexo==2&&edad>15&&edad<22){
 			elejir[i] = true;
 		}else{
 			elejir[i] = false;
 		}
 	}
-	// auxiliar = tarjetas;
+	printf("Los censos de las jovenes solteras con edad entre 16 y 21 son:\n");
 	for (int j = 0; j < auxiliar; ++j){
-		if (!elejir[j]){
+		if (elejir[j]){
 			printf("%d\n", numCenso[j]);
 		}
 	}
 }
 
+void ejemSiete(){
+	
+}
+
+void menu(){
+	int x;
+	do
+	{
+		printf("---MENU---\nElija un ejercicio seleccionando el numero\nopcion 21 para salir\nElejir ejercicio: ");
+		scanf("%d", &x);
+		switch(x){
+			case 1: ejemUno(); break;
+			case 2: ejemDos(); break;
+			case 3: ejemTres(); break;
+			case 4: ejemCuatro(); break;
+			case 5: ejemCinco(); break;
+			case 6: ejemSeis(); break;
+			case 7: ejemSiete(); break;
+			default: break;
+		}
+	} while (x!=21);
+}
+
 main(){
-	ejemSeis();
+	menu();
 }
