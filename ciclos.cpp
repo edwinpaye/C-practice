@@ -17,6 +17,10 @@ void ejemUno(){
 	printf("%d\n", alumnos);
 }
 
+void ejemDos(){
+	
+}
+
 main(){
 	ejemUno();
 }
