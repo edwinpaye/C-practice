@@ -21,14 +21,6 @@ void ejemDos(){
 
 }
 
-void ejemTres(){
-
-}
-
-void ejemCuatro(){
-	
-}
-
 main(){
 	ejemUno();
 }
