@@ -170,9 +170,37 @@ void ejemCinco(){
 }
 
 void ejemSeis(){
-	
+	int tarjetas, edad, auxiliar;
+	char estadoCivil, sexo;
+	printf("Ingrese la cantidad de tarjetas: ");
+	scanf("%d", &tarjetas);
+	auxiliar = tarjetas;
+	int numCenso[auxiliar];
+	bool elejir[auxiliar];
+	for (int i = 0; i < auxiliar; ++i){
+		// system("cls");
+		printf("Ingrese el numero de censo: ");
+		scanf("%d", &numCenso[i]);
+		printf("Ingrese el sexo: ");
+		scanf("%s", &sexo);
+		printf("Ingrese la edad: ");
+		scanf("%d", &edad);
+		printf("Estado civil\na.Soltero\nb.Casado\nc.Viudo\nd.Divorciado\nOpcion: ");
+		scanf("%s", &estadoCivil);
+		if (edad>15&&edad<22&&estadoCivil=='a'&&sexo=='f'){
+			elejir[i] = true;
+		}else{
+			elejir[i] = false;
+		}
+	}
+	// auxiliar = tarjetas;
+	for (int j = 0; j < auxiliar; ++j){
+		if (!elejir[j]){
+			printf("%d\n", numCenso[j]);
+		}
+	}
 }
 
 main(){
-	ejemCinco();
+	ejemSeis();
 }
