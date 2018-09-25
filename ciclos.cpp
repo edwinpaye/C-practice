@@ -18,6 +18,10 @@ void ejemUno(){
 }
 
 void ejemDos(){
+
+}
+
+void ejemTres(){
 	
 }
 
