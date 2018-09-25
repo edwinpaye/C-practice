@@ -201,6 +201,10 @@ void ejemSeis(){
 }
 
 void ejemSiete(){
+
+}
+
+void ejemOcho(){
 	
 }
 
