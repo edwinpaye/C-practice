@@ -204,10 +204,6 @@ void ejemSiete(){
 
 }
 
-void ejemOcho(){
-	
-}
-
 void menu(){
 	int x;
 	do
