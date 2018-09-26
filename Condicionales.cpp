@@ -44,6 +44,42 @@ void ejerUno(){
     }
 }
 
+
+void ejerDos(int total){
+    int opcion, venta, totl=total;
+    printf("--Menu Supermercado--\n1.Adicionar venta.\n2.Recaudado total.\n3.Salir\nElejir opcion: ");
+    scanf("%d", &opcion);
+    if(opcion!=3){
+        if(opcion==1){
+            printf("Ingrese el monto de la venta: ");
+            scanf("%d", &venta);
+            printf("Elija el departamento\n1.Ropa.\n2.Comestibles.\n3.Perfumeria.\nElejir opcion: ");
+            scanf("%d", &opcion);
+            if(venta>100){
+                if(opcion==1){
+                    venta = venta - (venta*5/100);
+                }else{
+                    if(opcion==1){
+                        venta = venta - (venta*3.5/100);
+                    }else{
+                        venta = venta - (venta*8/100);
+                    }
+                }
+            }
+            totl = totl + venta;
+            printf("El monto a pagar es de $ %d.\n", venta);
+
+        }else{
+            if(opcion==2){
+                printf("Recaudo total del dia es: $ %d .\n", totl);
+            }else{
+                printf("Opcion fuera de rango.");
+            }
+        }
+        ejerDos(totl);
+    }
+}
+
 main(){
-    
+    menu();
 }
