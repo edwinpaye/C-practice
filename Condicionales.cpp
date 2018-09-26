@@ -167,6 +167,24 @@ void ejerSeis(){
     printf("El monto inicial es de: %f\n", (montoActual/(1+(tasaInteres*totalMeses))));
 }
 
+void menu(){
+    int opcion;
+    do{
+        printf("\n--Menu--\n1.Ejercicio Uno\n2.Ejercicio Dos\n3.Ejercicio Tres\n4.Ejercicio Cuatro\n5.Ejercicio Cinco\n6.Ejercicio Seis\n7.Salir\nElejir opcion: ");
+        scanf("%d", &opcion);
+        switch(opcion){
+            case 1: ejerUno(); break;
+            case 2: ejerDos(0); break;
+            case 3: ejerTres(); break;
+            case 4: ejerCuatro(); break;
+            case 5: ejerCinco(); break;
+            case 6: ejerSeis(); break;
+            case 7: break;
+            default: printf("Opcion fuera del rango."); break;
+        }
+    }while(opcion!=7);
+}
+
 main(){
     menu();
 }
