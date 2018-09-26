@@ -102,6 +102,36 @@ void ejerTres(){
     printf("Total a pagar es: %f", total);
 }
 
+
+void ejerCuatro(){
+    int temp, humedad;
+    printf("Ingrese la temperatura: ");
+    scanf("%d", &temp);
+    printf("Ingrese la humedad: ");
+    scanf("%d", &humedad);
+    if(temp==25 && humedad==90){
+        printf("Pantalon largo y camisa.\n");
+    }else{
+        if(temp==10 && humedad==10 ){
+            printf("Pantalon de pana y chaleco.\n");
+        }else{
+            if(temp==2 && humedad==45 ){
+                printf("Pantalon, chaleco y abrigo.\n");
+            }else{
+                if(temp==30 && humedad==85 ){
+                    printf("Pantalon corto y camiseta.\n");
+                }else{
+                    if(temp==38 && humedad==86 ){
+                        printf("Pantalon corto y camiseta.\n");
+                    }else{
+                        printf("No hay sugerencia en la tabla de valores para esos datos");
+                    }
+                }
+            }
+        }
+    }
+}
+
 main(){
     menu();
 }
