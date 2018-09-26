@@ -132,6 +132,30 @@ void ejerCuatro(){
     }
 }
 
+void ejerCinco(){
+    float diasAtraso, deuda;
+    printf("Ingrese los dias atrasados: ");
+    scanf("%f", &diasAtraso);
+    printf("Ingrese el monto de la deuda: ");
+    scanf("%f", &deuda);
+    if(diasAtraso>130){
+        deuda = deuda + (deuda*15)/100;
+    }else{
+        if(diasAtraso>91){
+            deuda = deuda + (deuda*7)/100;
+        }else{
+            if(diasAtraso>61){
+                deuda = deuda + (deuda*5)/100;
+            }else{
+                if(diasAtraso>30){
+                    deuda = deuda + (deuda*2)/100;
+                }
+            }
+        }
+    }
+    printf("El monto a pagar es de: %f\n", deuda);
+}
+
 main(){
     menu();
 }
