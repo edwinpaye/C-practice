@@ -80,6 +80,28 @@ void ejerDos(int total){
     }
 }
 
+
+void ejerTres(){
+    int montoHora, horas, hExDiurno, hExNocturno;
+    float total=0;
+    printf("Ingrese el pago por hora: ");
+    scanf("%d", &montoHora);
+    printf("Ingrese las horas normales trabajadas: ");
+    scanf("%d", &horas);
+    printf("Ingrese las horas extra diurna(desde 0): ");
+    scanf("%d", &hExDiurno);
+    printf("Ingrese las horas extra nocturna(desde 0): ");
+    scanf("%d", &hExNocturno);
+    total = montoHora*horas;
+    if(hExDiurno>0){
+        total += (montoHora*hExDiurno*2);
+    }
+    if(hExNocturno>0){
+        total += (montoHora*hExNocturno*2) + ((montoHora*hExNocturno*2*25)/100);
+    }
+    printf("Total a pagar es: %f", total);
+}
+
 main(){
     menu();
 }
