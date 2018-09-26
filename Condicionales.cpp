@@ -156,6 +156,17 @@ void ejerCinco(){
     printf("El monto a pagar es de: %f\n", deuda);
 }
 
+void ejerSeis(){
+    float montoActual, totalMeses, tasaInteres;
+    printf("Ingrese el monto actual: ");
+    scanf("%f", &montoActual);
+    printf("Ingrese el total de meses transcurrido: ");
+    scanf("%f", &totalMeses);
+    printf("Ingrese la tasa de interes mensual simple: ");
+    scanf("%f", &tasaInteres);
+    printf("El monto inicial es de: %f\n", (montoActual/(1+(tasaInteres*totalMeses))));
+}
+
 main(){
     menu();
 }
