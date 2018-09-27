@@ -103,6 +103,19 @@ void auxiliarDos(int *contador, int *personas, float *a, float *b, float *c){
     }
 }
 
+float auxiliarTres(int *contador, int *personas, float *a, float *b, float *c){
+    float total = 0;
+    if (*contador!=*personas)
+    {
+        total = a[*contador] + b[*contador] + c[*contador];
+        printf("El monto a pagar al empleado %d\nhoras normales = %f; horas extra diurna = %f; horas extra nocturna = %f; Total = %f\n", (*contador+1), a[*contador], b[*contador], c[*contador], total);
+        total = b[*contador] + c[*contador];
+        *contador = *contador +1;
+        total = total + auxiliarTres(contador, personas, a, b, c);
+    }
+    return total;
+}
+
 void ejerTres(){
     int personas, contador = 0;
     printf("Ingrese la cantidad de personas: ");
