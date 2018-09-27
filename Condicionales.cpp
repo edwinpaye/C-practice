@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void auxiliarUno(int *a, int *b, int *c, int *d){
     int auxiliar;
@@ -47,7 +48,7 @@ void ejerUno(){
 
 void ejerDos(int total){
     int opcion, venta, totl=total;
-    printf("--Menu Supermercado--\n1.Adicionar venta.\n2.Recaudado total.\n3.Salir\nElejir opcion: ");
+    printf("\n--Menu Supermercado--\n1.Adicionar venta.\n2.Recaudado total.\n3.Salir\nElejir opcion: ");
     scanf("%d", &opcion);
     if(opcion!=3){
         if(opcion==1){
@@ -80,28 +81,16 @@ void ejerDos(int total){
     }
 }
 
-
 void ejerTres(){
-    int montoHora, horas, hExDiurno, hExNocturno;
-    float total=0;
-    printf("Ingrese el pago por hora: ");
-    scanf("%d", &montoHora);
-    printf("Ingrese las horas normales trabajadas: ");
-    scanf("%d", &horas);
-    printf("Ingrese las horas extra diurna(desde 0): ");
-    scanf("%d", &hExDiurno);
-    printf("Ingrese las horas extra nocturna(desde 0): ");
-    scanf("%d", &hExNocturno);
-    total = montoHora*horas;
-    if(hExDiurno>0){
-        total += (montoHora*hExDiurno*2);
-    }
-    if(hExNocturno>0){
-        total += (montoHora*hExNocturno*2) + ((montoHora*hExNocturno*2*25)/100);
-    }
-    printf("Total a pagar es: %f", total);
+    int personas, contador = 0;
+    printf("Ingrese la cantidad de personas: ");
+    scanf("%d", &personas);
+    float total, horas[personas], hExDiurno[personas], hExNocturno[personas];
+    auxiliarDos(&contador, &personas, horas, hExDiurno, hExNocturno);
+    contador = 0;
+    total = auxiliarTres(&contador, &personas, horas, hExDiurno, hExNocturno);
+    printf("El total a pagar por concepto de horas extra es de: %f\n", total);
 }
-
 
 void ejerCuatro(){
     int temp, humedad;
@@ -124,7 +113,7 @@ void ejerCuatro(){
                     if(temp==38 && humedad==86 ){
                         printf("Pantalon corto y camiseta.\n");
                     }else{
-                        printf("No hay sugerencia en la tabla de valores para esos datos");
+                        printf("No hay sugerencia en la tabla de valores para esos datos\n");
                     }
                 }
             }
@@ -169,20 +158,23 @@ void ejerSeis(){
 
 void menu(){
     int opcion;
-    do{
+    // do{
         printf("\n--Menu--\n1.Ejercicio Uno\n2.Ejercicio Dos\n3.Ejercicio Tres\n4.Ejercicio Cuatro\n5.Ejercicio Cinco\n6.Ejercicio Seis\n7.Salir\nElejir opcion: ");
         scanf("%d", &opcion);
-        switch(opcion){
-            case 1: ejerUno(); break;
-            case 2: ejerDos(0); break;
-            case 3: ejerTres(); break;
-            case 4: ejerCuatro(); break;
-            case 5: ejerCinco(); break;
-            case 6: ejerSeis(); break;
-            case 7: break;
-            default: printf("Opcion fuera del rango."); break;
+        if (opcion!=7){
+            switch(opcion){
+                case 1: ejerUno(); break;
+                case 2: ejerDos(0); break;
+                case 3: ejerTres(); break;
+                case 4: ejerCuatro(); break;
+                case 5: ejerCinco(); break;
+                case 6: ejerSeis(); break;
+                case 7: break;
+                default: printf("Opcion fuera del rango.\n"); break;
+            }
+            menu();
         }
-    }while(opcion!=7);
+    // }while(opcion!=7);
 }
 
 main(){
