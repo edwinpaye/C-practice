@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void auxiliarUno(int *a, int *b, int *c, int *d){
     int auxiliar;
