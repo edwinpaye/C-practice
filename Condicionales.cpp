@@ -202,7 +202,6 @@ void menu(){
             case 4: ejerCuatro(); break;
             case 5: ejerCinco(); break;
             case 6: ejerSeis(); break;
-            case 7: break;
             default: printf("Opcion fuera del rango.\n"); break;
         }
         menu();
