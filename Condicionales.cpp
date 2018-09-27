@@ -81,6 +81,28 @@ void ejerDos(int total){
     }
 }
 
+void auxiliarDos(int *contador, int *personas, float *a, float *b, float *c){
+    float montoHora, horas, hExDiurno, hExNocturno;
+    float total=0;
+    if (*contador<*personas){
+        printf("Datos de el empleado %d\n", *contador+1);
+        printf("Ingrese el pago por hora: ");
+        scanf("%f", &montoHora);
+        printf("Ingrese las horas normales trabajadas: ");
+        scanf("%f", &horas);
+        printf("Ingrese las horas extra diurna(desde 0): ");
+        scanf("%f", &hExDiurno);
+        printf("Ingrese las horas extra nocturna(desde 0): ");
+        scanf("%f", &hExNocturno);
+        a[*contador] = montoHora*horas;
+        b[*contador] = (montoHora*hExDiurno*2);
+        c[*contador] = (montoHora*hExNocturno*2) + ((montoHora/100)*hExNocturno*2*25);
+        *contador = *contador +1;
+        printf("contador funcionando %d\n", *contador);
+        auxiliarDos(contador, personas, a, b, c);
+    }
+}
+
 void ejerTres(){
     int personas, contador = 0;
     printf("Ingrese la cantidad de personas: ");
