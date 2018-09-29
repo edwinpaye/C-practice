@@ -117,6 +117,41 @@ void ejerTres(){
 	printf("Total de egresos registrados = %d y el restante de caja = %d\n", totalEgreso, caja);
 }
 
+void ejerCuatro(){
+	int capital, resto;
+	printf("Ingrese la cantidad de capital actual: ");
+	scanf("%d", &capital);
+	if (capital>20000){
+		resto = capital-7000;
+	}else{
+		if (capital>-1){
+			printf("Se pedira un prestamo de %d para el nuevo saldo de 20000 $us.\n", 20000-capital);
+			resto = 13000;
+		}else{
+			printf("Se pedira un prestamo de %d para el nuevo saldo de 10000 $us. \n", (capital*(-1)+10000));
+			resto = 3000;
+		}
+	}
+	printf("-Se destinaran 5000 $us para equipos de computacion.\n-Se destinaran 2000 $us para mobiliario\n");
+	printf("-Se destinara %d $us para comprar insumos y %d $us para incentivos al personal.\n", resto/2, resto/2);
+}
+
+void menu(){
+	int opcion;
+	do{
+		printf("\n---Menu---\n1.Ejercicio Uno\n2.Ejercicio Dos\n3.Ejercicio Tres\n4.Ejercicio Cuatro\n5.Salir\nElejir opcion: ");
+		scanf("%d", &opcion);
+		switch(opcion){
+			case 1: ejerUno(); break;
+			case 2: ejerDos(); break;
+			case 3: ejerTres(); break;
+			case 4: ejerCuatro(); break;
+			case 5: break;
+			default: printf("Opcion fuera de rango\n");
+		}
+	} while (opcion!=5);
+}
+
 main(){
 	menu();
 }
