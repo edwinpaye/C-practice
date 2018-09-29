@@ -31,6 +31,32 @@ void ejerUno(){
 	}
 }
 
+void incisoUno(){
+	int trabajadores, horas, pagoHora;
+	float total=0, conceptoHEx=0;
+	printf("Ingrese la cantidad de trabajadores: ");
+	scanf("%d", &trabajadores);
+	printf("Ingrese el pago por hora: ");
+	scanf("%d", &pagoHora);
+	for (int i = 1; i <= trabajadores; ++i){
+		printf("Ingrese las horas del trabajador %d: ", i);
+		scanf("%d", &horas);
+		if (horas>48){
+			total = pagoHora*40 + pagoHora*2*8 + pagoHora*3*(horas-48);
+			conceptoHEx += (pagoHora*2*8 + pagoHora*3*(horas-48));
+		}else{
+			if (horas>40){
+				total = pagoHora*40 + pagoHora*2*(horas-40);
+				conceptoHEx += pagoHora*2*(horas-40);
+			}else{
+				total = pagoHora*horas;
+			}
+		}
+		printf("El total a pagar al trabajador %d es: %f\n", i, total);
+	}
+	printf("El dinero para %d trabajador(es) por concepto de las horas extra es de: %f\n", trabajadores, conceptoHEx);
+}
+
 main(){
 	menu();
 }
