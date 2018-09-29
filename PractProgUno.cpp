@@ -57,6 +57,19 @@ void incisoUno(){
 	printf("El dinero para %d trabajador(es) por concepto de las horas extra es de: %f\n", trabajadores, conceptoHEx);
 }
 
+void incisoDos(){
+	int xa, xb, ya, yb;
+	printf("Ingrese la coordenada de x1: ");
+	scanf("%d", &xa);
+	printf("Ingrese la coordenada de y1: ");
+	scanf("%d", &ya);
+	printf("Ingrese la coordenada de x2: ");
+	scanf("%d", &xb);
+	printf("Ingrese la coordenada de y2: ");
+	scanf("%d", &yb);
+	printf("Coordenadas polares r = %d y alfa = %f\n", (xb+yb)/2, (atan(ya/xa)*180/PI));
+}
+
 main(){
 	menu();
 }
