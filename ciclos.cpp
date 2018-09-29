@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string> 
-#include <cstring>
+//#include <string> 
+//#include <cstring>
 
 void ejemUno(){
 	int alumnos, auxiliar=0, nota, promedio, cont=0;
@@ -8,16 +8,13 @@ void ejemUno(){
 	scanf("%d", &alumnos);
 	printf("Ingrese el promedio minimo: ");
 	scanf("%d", &promedio);
-	for (int i = 1; i <= alumnos; ++i)
-	{
-		for (int j = 1; j <= 5; ++j)
-		{
+	for (int i = 1; i <= alumnos; ++i){
+		for (int j = 1; j <= 5; ++j){
 			printf("Ingrese la nota del alumno %d de la unidad %d: ", i, j);
 			scanf("%d", &nota);
 			auxiliar += nota;
 		}
-		if (auxiliar/5<promedio)
-		{
+		if (auxiliar/5<promedio){
 			cont++;
 		}
 
@@ -29,16 +26,13 @@ void ejemDos(){
 	int candidatoUno=0,candidatoDos=0,candidatoTres=0,votos,auxiliar;
 	printf("Ingrese la cantidad de votos: ");
 	scanf("%d", &votos);
-	for (int i = 1; i <= votos; ++i)
-	{
+	for (int i = 1; i <= votos; ++i){
 		printf("Ingrese el numero del candidato para votar: ");
 		scanf("%d", &auxiliar);
-		if (auxiliar==1)
-		{
+		if (auxiliar==1){
 			candidatoUno++;
 		}else{
-			if (auxiliar==2)
-			{
+			if (auxiliar==2){
 				candidatoDos++;
 			}else{
 				candidatoTres++;
@@ -51,20 +45,16 @@ void ejemDos(){
 		if (candidatoUno>candidatoDos && candidatoUno>candidatoTres){
 			printf("El ganador es el candidato Uno\n");
 		}else{
-			if (candidatoDos>candidatoUno && candidatoDos>candidatoTres)
-			{
+			if (candidatoDos>candidatoUno && candidatoDos>candidatoTres){
 				printf("El ganador es el candidato Dos\n");
 			}else{
-				if (candidatoTres>candidatoUno && candidatoTres>candidatoDos)
-				{
+				if (candidatoTres>candidatoUno && candidatoTres>candidatoDos){
 					printf("El ganador es el candidato Tres\n");
 				}else{
-					if (candidatoUno==candidatoDos)
-					{
+					if (candidatoUno==candidatoDos){
 						printf("Empate entre el candidato Uno y Dos\n");
 					}else{
-						if (candidatoUno==candidatoTres)
-						{
+						if (candidatoUno==candidatoTres){
 							printf("Empate entre el candidato Uno y Tres\n");
 						}else{
 							printf("Empate entre el candidato Dos y Tres\n");
@@ -78,8 +68,7 @@ void ejemDos(){
 
 void ejemTres(){
 	int cont=0, total=0, opcion=1, auxiliar;
-	do
-	{
+	do{
 		printf("---MENU---\n1.Registrar venta.\n2.Total de ventas.\n3.Salir.\nElejir opcion: ");
 		scanf("%d", &opcion);
 		switch(opcion){
@@ -105,8 +94,7 @@ void ejemCuatro(){
 	iva = 100/iva;
 	printf("Ingrese el tipo de moneda:");
 	scanf("%s", moneda);
-	do
-	{
+	do{
 		printf("---MENU---\n1.Registrar venta.\n2.Total de ventas en caja.\n3.Salir.\nElejir opcion: ");
 		scanf("%d", &opcion);
 		switch(opcion){
@@ -115,8 +103,7 @@ void ejemCuatro(){
 				scanf("%d", &venta);
 				printf("El total a pagar con iva es: %f %s.\nIngrese el pago del cliente: ", ((venta/iva)+venta), moneda);
 				scanf("%d", &deposito);
-				if (deposito>((venta/iva)+venta))
-				{
+				if (deposito>((venta/iva)+venta)){
 					printf("Cambio de %f %s.\n", (deposito-((venta/iva)+venta)), moneda);
 				}
 				printf("Venta concluida con exito!\n");
@@ -139,8 +126,7 @@ void ejemCinco(){
 	iva = 100/iva;
 	printf("Ingrese el tipo de moneda:");
 	scanf("%s", moneda);
-	do
-	{
+	do{
 		printf("---MENU---\n1.Registrar venta.\n2.Total de ventas en caja.\n3.Salir.\nElejir opcion: ");
 		scanf("%d", &opcion);
 		switch(opcion){
@@ -151,13 +137,11 @@ void ejemCinco(){
 				while(deposito<((venta/iva)+venta)){
 					printf("Ingrese el pago del cliente: ");
 					scanf("%d", &deposito);
-					if (deposito<((venta/iva)+venta))
-					{
+					if (deposito<((venta/iva)+venta)){
 						printf("El pago es insuficiente....\n");
 					}
 				}
-				if (deposito>((venta/iva)+venta))
-				{
+				if (deposito>((venta/iva)+venta)){
 					printf("Cambio de %f %s.\n", (deposito-((venta/iva)+venta)), moneda);
 				}
 				printf("Venta concluida con exito!\n");
@@ -206,8 +190,7 @@ void ejemSiete(){
 
 void menu(){
 	int x;
-	do
-	{
+	do{
 		printf("---MENU---\nElija un ejercicio seleccionando el numero\nopcion 21 para salir\nElejir ejercicio: ");
 		scanf("%d", &x);
 		switch(x){
