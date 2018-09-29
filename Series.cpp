@@ -62,6 +62,23 @@ void ejemCuatro(){
 	printf("\n");
 }
 
+void ejemCinco(){
+	int num, cont = 0, cantidad=1;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	while(cont<=num){
+		if (cont>0)
+		{
+			cantidad = cantidad*2;
+			printf(",%d", cantidad);
+		}else{
+			printf("%d", cantidad);
+		}
+		cont++;
+	}
+	printf("\n");
+}
+
 main(){
 	menu();
 }
