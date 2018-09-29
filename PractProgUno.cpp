@@ -70,6 +70,17 @@ void incisoDos(){
 	printf("Coordenadas polares r = %d y alfa = %f\n", (xb+yb)/2, (atan(ya/xa)*180/PI));
 }
 
+void incisoTres(){
+	int n;
+	float l = 0;
+	printf("Ingrese la cantidad de tanques de gasolina: ");
+	scanf("%d", &n);
+	for (int i = 0; i < n; ++i){
+		l += (float)1/(2*(i+1)-1);
+	}
+	printf("La distancia que viajara el jeep es de: %f\n", 500*l);
+}
+
 main(){
 	menu();
 }
