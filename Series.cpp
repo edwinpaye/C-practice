@@ -51,6 +51,17 @@ void ejemTres(){
 	}
 }
 
+void ejemCuatro(){
+	int num, cont = 1;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	while(cont<=num){
+		printf("%d,", 5*cont);
+		cont++;
+	}
+	printf("\n");
+}
+
 main(){
 	menu();
 }
