@@ -81,6 +81,21 @@ void incisoTres(){
 	printf("La distancia que viajara el jeep es de: %f\n", 500*l);
 }
 
+void ejerDos(){
+	int opcion;
+	do{
+		printf("\n---Segundo Menu---\n1.Determinar el dinero de n trabajadores\n2.Coordenadas polares\n3.Distancia con n gasolina\n4.Salir\nElejir opcion: ");
+		scanf("%d", &opcion);
+		switch(opcion){
+			case 1: incisoUno(); break;
+			case 2: incisoDos(); break;
+			case 3: incisoTres(); break;
+			case 4: break;
+			default: printf("Opcion fuera de rango\n");
+		}
+	} while (opcion!=4);
+}
+
 main(){
 	menu();
 }
