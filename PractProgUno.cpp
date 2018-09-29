@@ -96,6 +96,27 @@ void ejerDos(){
 	} while (opcion!=4);
 }
 
+void ejerTres(){
+	int n, caja = 4300, egreso, totalEgreso=0;
+	printf("\nIngrese la cantidad de egresos: ");
+	scanf("%d", &n);
+	for (int i = 0; i < n; ++i){
+		printf("Ingrese la cantidad del egreso %d: ", i+1);
+		scanf("%d", &egreso);
+		if (egreso>-1){
+			if (egreso<caja){
+				caja = caja - egreso;
+				totalEgreso += egreso;
+			}else{
+				printf("El egreso supera a la cantidad restante de la caja %d\n", caja);
+			}
+		}else{
+			i=n;
+		}
+	}
+	printf("Total de egresos registrados = %d y el restante de caja = %d\n", totalEgreso, caja);
+}
+
 main(){
 	menu();
 }
