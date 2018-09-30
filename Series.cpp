@@ -120,6 +120,19 @@ void ejemOcho(){
 	printf("\n");	
 }
 
+void ejemNueve(){
+	int num, cont = 1;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	if (num>0){
+		while(cont<=num){
+			printf("%d,%s,%f,", cont, "A", 100000/(pow(10,cont)));
+			cont++;
+		}
+	}
+	printf("\n");
+}
+
 main(){
 	menu();
 }
