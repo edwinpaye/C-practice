@@ -133,6 +133,20 @@ void ejemNueve(){
 	printf("\n");
 }
 
+void ejemDiez(){
+	int num, cont = 1, contDos = 2;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	if (num>0){
+		while(cont<=num){
+			printf("%d,%d,%d,%s,", (55-5*cont), contDos, cont, "A");
+			cont++;
+			contDos+=2;
+		}
+	}
+	printf("\n");
+}
+
 main(){
 	menu();
 }
