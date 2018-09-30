@@ -106,6 +106,20 @@ void ejemSiete(){
 	printf("\n");
 }
 
+void ejemOcho(){
+	int num, cont = 1, cantidad=1;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	if (num>0){
+		while(cont<=num){
+			cantidad = cantidad*2;
+			printf("%d,%d,", cont*2, 101-cont);
+			cont++;
+		}
+	}
+	printf("\n");	
+}
+
 main(){
 	menu();
 }
