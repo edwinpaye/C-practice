@@ -161,6 +161,23 @@ void ejemXVII(){
 	}while(num%5==0);
 }
 
+void ejemXVIII(){
+	int num, cont = 5, suma=0;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	for (int i = 0; i <= num; ++i){
+		if (cont%2==0){
+			printf("-%d", cont);
+			suma += cont*(-1);
+		}else{
+			printf("+%d", cont);
+			suma += cont;
+		}
+		cont += 5;
+	}
+	printf("\nLa suma de de la serie es de: %d\n", suma);
+}
+
 main(){
 	menu();
 }
