@@ -147,6 +147,20 @@ void ejemDiez(){
 	printf("\n");
 }
 
+void ejemOnce(){
+	
+}
+
+void ejemXVII(){
+	int num, cont = 0, suma=0;
+	do{
+		printf("Ingrese un numero entero positivo para la serie: ");
+		scanf("%d", &num);
+
+		 
+	}while(num%5==0);
+}
+
 main(){
 	menu();
 }
