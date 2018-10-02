@@ -6,9 +6,8 @@ void ejemUno(){
 	printf("Ingrese un numero entero positivo: ");
 	scanf("%d", &num);
 	while(num!=0){
-		if ((num%10)%2==0){
+		if ((num%10)%2==0)
 			cont++;
-		}
 		num = num/10;
 	}
 	printf("Cantidad de numeros par: %d\n", cont);
@@ -21,9 +20,8 @@ void ejemDos(){
 	while(num!=0){
 		if ((num%10)%2==0)
 			contPares++;
-		else{
+		else
 			contImpares++;
-		}
 		num = num/10;
 	}
 	printf("Cantidad de numeros pares: %d y numeros impares: %d\n", contPares, contImpares);
@@ -33,7 +31,7 @@ void ejemTres(){
 	int num, contPares=0, contImpares=0;
 	printf("Ingrese un numero entero positivo de un digito: ");
 	scanf("%d", &num);
-	if (num<10&&num>-1){
+	if (num<10&&num>-1)
 		switch(num){
 			case 0: printf("cero\n"); break;
 			case 1: printf("uno\n"); break;
@@ -46,9 +44,8 @@ void ejemTres(){
 			case 8: printf("ocho\n"); break;
 			case 9: printf("nueve\n"); break;
 		}
-	}else{
+	else
 		printf("Error de ingreso\n");
-	}
 }
 
 void ejemCuatro(){
@@ -67,13 +64,11 @@ void ejemCinco(){
 	printf("Ingrese un numero entero positivo para la serie: ");
 	scanf("%d", &num);
 	while(cont<=num){
-		if (cont>0)
-		{
+		if (cont>0){
 			cantidad = cantidad*2;
 			printf(",%d", cantidad);
-		}else{
+		}else
 			printf("%d", cantidad);
-		}
 		cont++;
 	}
 	printf("\n");
@@ -94,13 +89,11 @@ void ejemSiete(){
 	printf("Ingrese un numero entero positivo para la serie: ");
 	scanf("%d", &num);
 	while(cont<num){
-		if (cont>0)
-		{
+		if (cont>0){
 			cantidad = cantidad*2;
 			printf(",%d,hola", cantidad);
-		}else{
+		}else
 			printf("%d,hola", cantidad);
-		}
 		cont++;
 	}
 	printf("\n");
@@ -110,13 +103,12 @@ void ejemOcho(){
 	int num, cont = 1, cantidad=1;
 	printf("Ingrese un numero entero positivo para la serie: ");
 	scanf("%d", &num);
-	if (num>0){
+	if (num>0)
 		while(cont<=num){
 			cantidad = cantidad*2;
 			printf("%d,%d,", cont*2, 101-cont);
 			cont++;
 		}
-	}
 	printf("\n");	
 }
 
@@ -124,12 +116,11 @@ void ejemNueve(){
 	int num, cont = 1;
 	printf("Ingrese un numero entero positivo para la serie: ");
 	scanf("%d", &num);
-	if (num>0){
+	if (num>0)
 		while(cont<=num){
 			printf("%d,%s,%f,", cont, "A", 100000/(pow(10,cont)));
 			cont++;
 		}
-	}
 	printf("\n");
 }
 
@@ -137,21 +128,17 @@ void ejemDiez(){
 	int num, cont = 1, contDos = 2;
 	printf("Ingrese un numero entero positivo para la serie: ");
 	scanf("%d", &num);
-	if (num>0){
+	if (num>0)
 		while(cont<=num){
 			printf("%d,%d,%d,%s,", (55-5*cont), contDos, cont, "A");
 			cont++;
 			contDos+=2;
 		}
-	}
 	printf("\n");
 }
 
 void ejemOnce(){
-	int cont=0;
-	if (cont==0)
-		cont++;
-	printf("Funciona%d\n", cont);
+
 }
 
 void ejemXVII(){
