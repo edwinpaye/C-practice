@@ -49,6 +49,26 @@ void ejerUno(){
     printf("El numero medio es: %d\n", result);
 }
 
+void ejerDos(){
+    int capital, resto;
+    printf("Ingrese la capital actual: ");
+    scanf("%d", &capital);
+    if(capital>20000){
+        printf("No se necesita prestamo del banco\n");
+        resto = capital - 7000;
+    }else{
+        if(capital>-1){
+            printf("Se pedira un prestamo de %d $us para el nuevo saldo de 20000 $us\n", 20000-capital);
+            resto =  13000;
+        }else{
+            printf("Se pedira un prestamo de %d $us para el nuevo saldo de 10000 $us\n", 10000+(capital*(-1)));
+            resto = 3000;
+        }
+    }
+    printf("-Se invertira 5000 $us para equipo de computacion.\n-Se invertira 2000 $us para mobiliario.\n");
+    printf("-Se invertira %d $us para insumos.\n-Se invertira %d $us para incentivo al personal.\n", resto/2, resto/2);
+}
+
 main(){
     menu();
 }
