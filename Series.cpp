@@ -19,9 +19,9 @@ void ejemDos(){
 	printf("Ingrese un numero entero positivo: ");
 	scanf("%d", &num);
 	while(num!=0){
-		if ((num%10)%2==0){
+		if ((num%10)%2==0)
 			contPares++;
-		}else{
+		else{
 			contImpares++;
 		}
 		num = num/10;
@@ -196,7 +196,7 @@ void ejemXIX(){
 	printf("\nLa suma de de la serie es de: %f\n", suma);
 }
 
-void ejemVeinte(){
+void ejemXX(){
 	int num, cont = 1;
 	float suma=0;
 	printf("Ingrese un numero entero positivo para la serie: ");
@@ -235,7 +235,7 @@ void menu(){
 			case 17: ejemXVII(); break;
 			case 18: ejemXVIII(); break;
 			case 19: ejemXIX(); break;
-			case 20: ejemVeinte(); break;
+			case 20: ejemXX(); break;
 			case 21: break;
 			default: printf("Opcion fuera de rango"); break;
 		}
