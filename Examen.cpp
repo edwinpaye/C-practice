@@ -12,6 +12,13 @@ int auxUno(int x, int y){
         return x;
 }
 
+int auxDos(int x, int y){
+    if(x>y)
+        return y;
+    else
+        return x;
+}
+
 main(){
     menu();
 }
