@@ -69,6 +69,48 @@ void ejerDos(){
     printf("-Se invertira %d $us para insumos.\n-Se invertira %d $us para incentivo al personal.\n", resto/2, resto/2);
 }
 
+void ejerTres(){
+    int diaSemana;
+    int diaMes;
+    int mes;
+    int gestion;
+    printf("Ingrese el numero del dia de la semana (1 a 7): ");
+    scanf("%d", &diaSemana);
+    printf("Ingrese el numero del dia del mes: ");
+    scanf("%d", &diaMes);
+    printf("Ingrese el numero correspondiente al mes: ");
+    scanf("%d", &mes);
+    printf("Ingrese las ultimas dos cifras de la gestion: ");
+    scanf("%d", &gestion);
+    switch(diaSemana){
+        case 1: printf("Lunes-"); break;
+        case 2: printf("Martes-"); break;
+        case 3: printf("Miercoles-"); break;
+        case 4: printf("Jueves-"); break;
+        case 5: printf("Viernes-"); break;
+        case 6: printf("Sabado-"); break;
+        case 7: printf("Domingo-"); break;
+        default: printf("Numero de dia incorrecto-"); break;
+    }
+    printf("%d-", diaMes);
+    switch(mes){
+        case 1: printf("Enero-"); break;
+        case 2: printf("Febrero-"); break;
+        case 3: printf("Marzo-"); break;
+        case 4: printf("Abril-"); break;
+        case 5: printf("Mayo-"); break;
+        case 6: printf("Junio-"); break;
+        case 7: printf("Julio-"); break;
+        case 8: printf("Agosto-"); break;
+        case 9: printf("Septiembre-"); break;
+        case 10: printf("Octubre-"); break;
+        case 11: printf("Noviembre-"); break;
+        case 12: printf("Diciembre-"); break;
+        default: printf("Numero de mes incorrecto-"); break;
+    }
+    printf("%d\n", gestion);
+}
+
 main(){
     menu();
 }
