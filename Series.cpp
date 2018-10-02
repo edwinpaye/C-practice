@@ -148,7 +148,10 @@ void ejemDiez(){
 }
 
 void ejemOnce(){
-	
+	int cont=0;
+	if (cont==0)
+		cont++;
+	printf("Funciona%d\n", cont);
 }
 
 void ejemXVII(){
