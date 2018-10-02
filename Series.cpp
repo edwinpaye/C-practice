@@ -214,6 +214,34 @@ void ejemVeinte(){
 	printf("\nLa suma de de la serie es de: %f\n", suma);
 }
 
+void menu(){
+	int x;
+	do{
+		printf("\n---MENU---\nElija un ejercicio seleccionando el numero\nopcion 21 para salir\nElejir ejercicio: ");
+		scanf("%d", &x);
+		switch(x){
+			case 1: ejemUno(); break;
+			case 2: ejemDos(); break;
+			case 3: ejemTres(); break;
+			case 4: ejemCuatro(); break;
+			case 5: ejemCinco(); break;
+			case 6: ejemSeis(); break;
+			case 7: ejemSiete(); break;
+			case 8: ejemOcho(); break;
+			case 9: ejemNueve(); break;
+			case 10: ejemDiez(); break;
+			case 11: ejemOnce(); break;
+			// case 12: ejemDoce(); break;
+			case 17: ejemXVII(); break;
+			case 18: ejemXVIII(); break;
+			case 19: ejemXIX(); break;
+			case 20: ejemVeinte(); break;
+			case 21: break;
+			default: printf("Opcion fuera de rango"); break;
+		}
+	} while (x!=21);
+}
+
 main(){
 	menu();
 }
