@@ -196,6 +196,24 @@ void ejemXIX(){
 	printf("\nLa suma de de la serie es de: %f\n", suma);
 }
 
+void ejemVeinte(){
+	int num, cont = 1;
+	float suma=0;
+	printf("Ingrese un numero entero positivo para la serie: ");
+	scanf("%d", &num);
+	for (int i = 0; i <= num; ++i){
+		if (cont%2==0){
+			printf("%d/(%d)", 3*cont*(-1), (cont*10+1));
+			suma += (float)(3*cont*(-1))/(cont*10+1);
+		}else{
+			printf("+%d/(%d)", 3*cont, cont*10+1);
+			suma += (float)3*cont/(cont*10+1);
+		}
+		cont++;
+	}
+	printf("\nLa suma de de la serie es de: %f\n", suma);
+}
+
 main(){
 	menu();
 }
