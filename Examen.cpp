@@ -115,6 +115,42 @@ int aleatorio(int limite_inferior, int limite_superior){
     return limite_inferior + rand() % (limite_superior +1 - limite_inferior);
 }
 
+void ejerCuatro(){
+    int candUno=0, candDos=0, candTres=0, auxiliar;
+    srand(time(NULL));
+    for(int i=0; i<250; ++i){
+        auxiliar = aleatorio(1, 3);
+        if(auxiliar==1)
+            candUno++;
+        else{
+            if(auxiliar==2)
+                candDos++;
+            else
+                candTres++;
+        }
+    }
+        candUno = candUno*100/250;
+        candDos = candDos*100/250;
+        candTres = candTres*100/250;
+    if(candUno>candDos&&candUno>candTres){
+        printf("Gana el candidato Uno con %d porciento\n", candUno);
+        printf("Candidato Dos %d porciento y candidato Tres %d porciento\n", candDos, candTres);
+    }else{
+        if(candDos>candUno&&candDos>candTres){
+            printf("Gana el candidato Dos con %d porciento\n", candDos);
+            printf("Candidato Uno %d porciento y candidato Tres %d porciento\n", candUno, candTres);
+        }else{
+            if(candTres>candUno&&candTres>candDos){
+                printf("Gana el candidato Tres con %d porciento\n", candTres);
+                printf("Candidato Uno %d porciento y candidato Dos %d porciento\n", candUno, candDos);
+            }else{
+                printf("Empate entre candidatos con porcentaje igual\n");
+                printf("Uno %d porciento Dos %d porciento Tres %d porciento\n", candUno, candDos, candTres);
+            }
+        }
+    }
+}
+
 main(){
     menu();
 }
