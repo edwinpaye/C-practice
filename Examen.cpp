@@ -5,6 +5,13 @@
 
 #define PI 3.14159265
 
+int auxUno(int x, int y){
+    if(x<y)
+        return y;
+    else
+        return x;
+}
+
 main(){
     menu();
 }
