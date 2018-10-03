@@ -25,20 +25,19 @@ void ejerUno(){
     auxiliarUno(&partidoUno, &partidoDos, &partidoTres, &partidoCuatro);
     auxiliarUno(&partidoUno, &partidoDos, &partidoTres, &partidoCuatro);
     auxiliarUno(&partidoUno, &partidoDos, &partidoTres, &partidoCuatro);
-    if(partidoUno==partidoDos&&partidoDos==partidoTres&&partidoTres==partidoCuatro){
+    if(partidoUno==partidoDos&&partidoDos==partidoTres&&partidoTres==partidoCuatro)
         printf("Los cuatro partidos empataron las elecciones con %d votos.\n", partidoUno);
-    }else{
-        if(partidoUno>partidoDos&&partidoUno>partidoTres&&partidoUno>partidoCuatro){
+    else{
+        if(partidoUno>partidoDos&&partidoUno>partidoTres&&partidoUno>partidoCuatro)
             printf("El ganador es el Partido Uno con %d votos\n", partidoUno);
-        }else{
-            if(partidoDos>partidoUno&&partidoDos>partidoTres&&partidoDos>partidoCuatro){
+        else{
+            if(partidoDos>partidoUno&&partidoDos>partidoTres&&partidoDos>partidoCuatro)
                 printf("El ganador es el Partido Dos con %d votos\n", partidoDos);
-            }else{
-                if(partidoTres>partidoDos&&partidoTres>partidoUno&&partidoTres>partidoCuatro){
+            else{
+                if(partidoTres>partidoDos&&partidoTres>partidoUno&&partidoTres>partidoCuatro)
                     printf("El ganador es el Partido Tres con %d votos\n", partidoTres);
-                }else{
+                else
                     printf("El ganador es el Partido Cuatro con %d votos\n", partidoCuatro);
-                }
             }
         }
     }
@@ -56,25 +55,23 @@ void ejerDos(int total){
             printf("Elija el departamento\n1.Ropa.\n2.Comestibles.\n3.Perfumeria.\nElejir opcion: ");
             scanf("%d", &opcion);
             if(venta>100){
-                if(opcion==1){
+                if(opcion==1)
                     venta = venta - (venta*5/100);
-                }else{
-                    if(opcion==1){
+                else{
+                    if(opcion==1)
                         venta = venta - (venta*3.5/100);
-                    }else{
+                    else
                         venta = venta - (venta*8/100);
-                    }
                 }
             }
             totl = totl + venta;
             printf("El monto a pagar es de $ %d.\n", venta);
 
         }else{
-            if(opcion==2){
+            if(opcion==2)
                 printf("Recaudo total del dia es: $ %d .\n", totl);
-            }else{
+            else
                 printf("Opcion fuera de rango.");
-            }
         }
         ejerDos(totl);
     }
@@ -130,23 +127,22 @@ void ejerCuatro(){
     scanf("%d", &temp);
     printf("Ingrese la humedad: ");
     scanf("%d", &humedad);
-    if(temp==25 && humedad==90){
+    if(temp==25 && humedad==90)
         printf("Pantalon largo y camisa.\n");
-    }else{
-        if(temp==10 && humedad==10 ){
+    else{
+        if(temp==10 && humedad==10 )
             printf("Pantalon de pana y chaleco.\n");
-        }else{
-            if(temp==2 && humedad==45 ){
+        else{
+            if(temp==2 && humedad==45 )
                 printf("Pantalon, chaleco y abrigo.\n");
-            }else{
-                if(temp==30 && humedad==85 ){
+            else{
+                if(temp==30 && humedad==85 )
                     printf("Pantalon corto y camiseta.\n");
-                }else{
-                    if(temp==38 && humedad==86 ){
+                else{
+                    if(temp==38 && humedad==86)
                         printf("Pantalon corto y camiseta.\n");
-                    }else{
+                    else
                         printf("No hay sugerencia en la tabla de valores para esos datos\n");
-                    }
                 }
             }
         }
@@ -159,18 +155,17 @@ void ejerCinco(){
     scanf("%f", &diasAtraso);
     printf("Ingrese el monto de la deuda: ");
     scanf("%f", &deuda);
-    if(diasAtraso>130){
+    if(diasAtraso>130)
         deuda = deuda + (deuda*15)/100;
-    }else{
-        if(diasAtraso>91){
+    else{
+        if(diasAtraso>91)
             deuda = deuda + (deuda*7)/100;
-        }else{
-            if(diasAtraso>61){
+        else{
+            if(diasAtraso>61)
                 deuda = deuda + (deuda*5)/100;
-            }else{
-                if(diasAtraso>30){
+            else{
+                if(diasAtraso>30)
                     deuda = deuda + (deuda*2)/100;
-                }
             }
         }
     }
