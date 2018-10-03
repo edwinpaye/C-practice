@@ -1,6 +1,4 @@
 #include <stdio.h>
-//#include <string> 
-//#include <cstring>
 
 void ejemUno(){
 	int alumnos, auxiliar=0, nota, promedio, cont=0;
@@ -14,10 +12,8 @@ void ejemUno(){
 			scanf("%d", &nota);
 			auxiliar += nota;
 		}
-		if (auxiliar/5<promedio){
+		if (auxiliar/5<promedio)
 			cont++;
-		}
-
 	}
 	printf("La cantidad de alumnos que no tendran derecho al examen: %d\n", cont);
 }
@@ -29,36 +25,34 @@ void ejemDos(){
 	for (int i = 1; i <= votos; ++i){
 		printf("Ingrese el numero del candidato para votar: ");
 		scanf("%d", &auxiliar);
-		if (auxiliar==1){
+		if (auxiliar==1)
 			candidatoUno++;
-		}else{
-			if (auxiliar==2){
+		else{
+			if (auxiliar==2)
 				candidatoDos++;
-			}else{
+			else
 				candidatoTres++;
-			}
 		}
 	}
-	if (candidatoUno==candidatoDos && candidatoUno==candidatoTres){
+	if (candidatoUno==candidatoDos && candidatoUno==candidatoTres)
 		printf("Empate entre los tres candidatos con %d votos\n", candidatoUno);
-	}else{
-		if (candidatoUno>candidatoDos && candidatoUno>candidatoTres){
+	else{
+		if (candidatoUno>candidatoDos && candidatoUno>candidatoTres)
 			printf("El ganador es el candidato Uno\n");
-		}else{
-			if (candidatoDos>candidatoUno && candidatoDos>candidatoTres){
+		else{
+			if (candidatoDos>candidatoUno && candidatoDos>candidatoTres)
 				printf("El ganador es el candidato Dos\n");
-			}else{
-				if (candidatoTres>candidatoUno && candidatoTres>candidatoDos){
+			else{
+				if (candidatoTres>candidatoUno && candidatoTres>candidatoDos)
 					printf("El ganador es el candidato Tres\n");
-				}else{
-					if (candidatoUno==candidatoDos){
+				else{
+					if (candidatoUno==candidatoDos)
 						printf("Empate entre el candidato Uno y Dos\n");
-					}else{
-						if (candidatoUno==candidatoTres){
+					else{
+						if (candidatoUno==candidatoTres)
 							printf("Empate entre el candidato Uno y Tres\n");
-						}else{
+						else
 							printf("Empate entre el candidato Dos y Tres\n");
-						}
 					}
 				}
 			}
@@ -114,7 +108,6 @@ void ejemCuatro(){
 			default: printf("Opcion no valida."); break;
 		}
 	} while (opcion!=3);
-	// printf("%f\n", 50*0.5);
 }
 
 void ejemCinco(){
@@ -137,13 +130,11 @@ void ejemCinco(){
 				while(deposito<((venta/iva)+venta)){
 					printf("Ingrese el pago del cliente: ");
 					scanf("%d", &deposito);
-					if (deposito<((venta/iva)+venta)){
+					if (deposito<((venta/iva)+venta))
 						printf("El pago es insuficiente....\n");
-					}
 				}
-				if (deposito>((venta/iva)+venta)){
+				if (deposito>((venta/iva)+venta))
 					printf("Cambio de %f %s.\n", (deposito-((venta/iva)+venta)), moneda);
-				}
 				printf("Venta concluida con exito!\n");
 				total += ((venta/iva)+venta);
 			} break;
@@ -170,17 +161,15 @@ void ejemSeis(){
 		scanf("%d", &edad);
 		printf("Estado civil\n1.Soltero\n2.Casado\n3.Viudo\n4.Divorciado\nOpcion: ");
 		scanf("%d", &estadoCivil);
-		if (estadoCivil==1&&sexo==2&&edad>15&&edad<22){
+		if (estadoCivil==1&&sexo==2&&edad>15&&edad<22)
 			elejir[i] = true;
-		}else{
+		else
 			elejir[i] = false;
-		}
 	}
 	printf("Los censos de las jovenes solteras con edad entre 16 y 21 son:\n");
 	for (int j = 0; j < auxiliar; ++j){
-		if (elejir[j]){
+		if (elejir[j])
 			printf("%d\n", numCenso[j]);
-		}
 	}
 }
 
