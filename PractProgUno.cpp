@@ -16,14 +16,12 @@ void ejerUno(){
 		total = precio*cantidad;
 		if (((cantidad - cantidad%12)/12)>3){
 			total = total - (total*15)/100;
-			for (int i = 0; i < (((cantidad - cantidad%12)/12)-3); ++i){
+			for (int i = 0; i < (((cantidad - cantidad%12)/12)-3); ++i)
 				obsequio++;
-			}
-			if (obsequio>0){
+			if (obsequio>0)
 				printf("El precio de la compra con descuento del 15 porciento es de %f y con obsequio de %d mas\n", total, obsequio);
-			}else{
+			else
 				printf("El precio de la compra con descuento del 15 porciento es de %f\n", total);
-			}
 		}else{
 			total = total - total/10;
 			printf("El precio de la compra con descuento del 10 porciento es de %f\n", total);
@@ -48,9 +46,8 @@ void incisoUno(){
 			if (horas>40){
 				total = pagoHora*40 + pagoHora*2*(horas-40);
 				conceptoHEx += pagoHora*2*(horas-40);
-			}else{
+			}else
 				total = pagoHora*horas;
-			}
 		}
 		printf("El total a pagar al trabajador %d es: %f\n", i, total);
 	}
@@ -75,9 +72,8 @@ void incisoTres(){
 	float l = 0;
 	printf("Ingrese la cantidad de tanques de gasolina: ");
 	scanf("%d", &n);
-	for (int i = 0; i < n; ++i){
+	for (int i = 0; i < n; ++i)
 		l += (float)1/(2*(i+1)-1);
-	}
 	printf("La distancia que viajara el jeep es de: %f\n", 500*l);
 }
 
@@ -107,12 +103,10 @@ void ejerTres(){
 			if (egreso<caja){
 				caja = caja - egreso;
 				totalEgreso += egreso;
-			}else{
+			}else
 				printf("El egreso supera a la cantidad restante de la caja %d\n", caja);
-			}
-		}else{
+		}else
 			i=n;
-		}
 	}
 	printf("Total de egresos registrados = %d y el restante de caja = %d\n", totalEgreso, caja);
 }
@@ -121,9 +115,9 @@ void ejerCuatro(){
 	int capital, resto;
 	printf("Ingrese la cantidad de capital actual: ");
 	scanf("%d", &capital);
-	if (capital>20000){
+	if (capital>20000)
 		resto = capital-7000;
-	}else{
+	else{
 		if (capital>-1){
 			printf("Se pedira un prestamo de %d para el nuevo saldo de 20000 $us.\n", 20000-capital);
 			resto = 13000;
