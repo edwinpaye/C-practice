@@ -6,14 +6,14 @@
 #define PI 3.14159265
 
 int auxUno(int x, int y){
-    if(x<y)
+    if(x<=y)
         return y;
     else
         return x;
 }
 
 int auxDos(int x, int y){
-    if(x>y)
+    if(x>=y)
         return y;
     else
         return x;
@@ -149,6 +149,15 @@ void ejerCuatro(){
             }
         }
     }
+}
+
+void ejerCinco(){
+    int contPar=0;
+    srand(time(NULL));
+    for(int i=0; i<50; ++i)
+        if(aleatorio(1, 6)==aleatorio(1,6))
+            contPar++;
+    printf("La cantidad de iguales fue del %d porciento de 50 lanzamientos\n", contPar*100/50);
 }
 
 main(){
