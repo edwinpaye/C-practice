@@ -160,6 +160,10 @@ void ejerCinco(){
     printf("La cantidad de iguales fue del %d porciento de 50 lanzamientos\n", contPar*100/50);
 }
 
+void ejerSeis(){
+    printf("%d\n", rand());
+}
+
 main(){
     menu();
 }
