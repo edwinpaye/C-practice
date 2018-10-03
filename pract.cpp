@@ -61,10 +61,8 @@ void ejercicioOcho(){
 	cin>>x;
 	cin>>y;
 	cin>>z;
-	if (x>y&&x>z)
-	{
-		if (y>z)
-		{
+	if (x>y&&x>z){
+		if (y>z){
 			/* code */
 		}else{
 
@@ -75,6 +73,7 @@ void ejercicioOcho(){
 void ejercicioDies(){
 	int x;
 }
+
 int opcion(){
 	int x;
 	do{
@@ -92,9 +91,7 @@ int opcion(){
 		cout<<"Elejir opcion: ";
 		cin>>x;
 		if (x<1 || x >11)
-		{
 			cout<<"----Opcion fuera de rango intente denuevo----"<<endl;
-		}
 	}while(x<1 || x>11);
 	return x;
 }
@@ -102,14 +99,11 @@ int opcion(){
 int main(){
 	int x = 1;
 	bool y = true;
-	//cin.get();
-	//ejercicioSiete();
 	while(y){
 		x = opcion();
 		if (x==11)
-		{
 			y=false;
-		}else{
+		else{
 			switch(x){
 				case 1: ejercicioUno();break;
 				case 2: ejercicioDos();break;
