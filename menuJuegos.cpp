@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-//Paye Villca Edwin.
 using namespace std;
 
 int aleatorio(int limite_inferior, int limite_superior){
@@ -32,9 +31,8 @@ void ejercicioUno(){
     while(dado%2!=0){
         dado = aleatorio(1, 6);
         contador++;
-        if(dado%2!=0){
+        if(dado%2!=0)
             cout<<dado<<endl;
-        }
     }
     cout<<dado<<endl;
     cout<<"El dado es: "<<dado<<", con "<<contador<<" intento(s)."<<endl;
@@ -52,9 +50,8 @@ void ejercicioDos(){
         if(dadoA==dadoB&&dadoA==dadoC){
             cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
             validador = false;
-        }else{
+        }else
             cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
-        }
     }
     cout<<"Trica en el turno: "<<contador<<endl;
 }
@@ -75,15 +72,13 @@ void ejercicioTres(){
         if(cartA==cartB&&(cartC==0||cartA==cartC)){
             cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
             validador = false;
-        }else{
+        }else
             cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
-        }
     }
-    if(cartC==0){
+    if(cartC==0)
         cout<<"Par y comodin en el turno: "<<contador<<endl;
-    }else{
+    else
         cout<<"Trica en el turno: "<<contador<<endl;
-    }
 }
 
 bool auxiliar(int intento, string jugador){
@@ -92,9 +87,8 @@ bool auxiliar(int intento, string jugador){
         cartB = aleatorio(1, 6);
         cartC = aleatorio(0, 6);
         cout<<intento<<". "<<jugador<<": "<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
-        if(cartA==cartB&&(cartC==0||cartA==cartC)){
+        if(cartA==cartB&&(cartC==0||cartA==cartC))
             return false;
-        }
     return true;
 }
 
@@ -112,9 +106,9 @@ void ejercicioCuatro(){
             jugadorB = auxiliar(contadorB, "Jugador Dos");
         }
     }
-    if(contadorA==contadorB){
+    if(contadorA==contadorB)
         cout<<"Empate en el turno "<<contadorA<<endl;
-    }else{
+    else{
         if(contadorA<contadorB){
             cout<<"Gana el jugador Uno con "<<contadorA<<" intentos."<<endl;
             cout<<"El jugador Dos con "<<contadorB<<" intentos."<<endl;
@@ -159,8 +153,6 @@ void menuJuegos(){
     }while(x!=3);
 }
 
-int main()
-{
+main(){
     menuJuegos();
-    return 0;
 }
