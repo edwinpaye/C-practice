@@ -253,6 +253,27 @@ void ejerNueve(){
     printf("\n");
 }
 
+void menu(){
+    int opcion;
+    do{
+        printf("\n---Menu---\n1.Uno\n2.Dos\n3.Tres\n4.Cuatro\n5.Cinco\n6.Seis\n7.Siete\n8.Ocho\n9.Nueve\n10.Salir\nElejir opcion: ");
+        scanf("%d", &opcion);
+        switch(opcion){
+            case 1: ejerUno(); break;
+            case 2: ejerDos(); break;
+            case 3: ejerTres(); break;
+            case 4: ejerCuatro(); break;
+            case 5: ejerCinco(); break;
+            case 6: ejerSeis(); break;
+            case 7: ejerSiete(); break;
+            case 8: ejerOcho(); break;
+            case 9: ejerNueve(); break;
+            case 10: break;
+            default: printf("Opcion no valida.\n"); break;
+        }
+    }while(opcion!=10);
+}
+
 main(){
     menu();
 }
