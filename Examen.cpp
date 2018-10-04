@@ -164,6 +164,32 @@ void ejerSeis(){
     printf("%d\n", rand());
 }
 
+void incisoA(){
+    int n, pagoHora, horas, conceptoHoras=0;
+    printf("Ingrese la cantidad de trabajadores: ");
+    scanf("%d", &n);
+    printf("Ingrese el pago por hora: ");
+    scanf("%d", &pagoHora);
+    for(int i=0; i<n; ++i){
+        printf("Ingrese las horas trabajadas del trabajador %d: ", i+1);
+        scanf("%d", &horas);
+        if(horas>48){
+            printf("El pago es de: %d", (40*pagoHora+(8*2*pagoHora)+((horas-48)*3*pagoHora)));
+            conceptoHoras += (8*2*pagoHora+(horas-48)*3*pagoHora);
+        }else{
+            if(horas>40){
+                printf("El pago es de: %d", (40*pagoHora+(horas-40)*2*pagoHora));
+                conceptoHoras += (horas-40)*2*pagoHora;
+            }else
+                printf("El pago es de: %d", pagoHora*horas);
+        }
+    }
+    if(conceptoHoras>0)
+        printf("Por concepto de horas extra, la empresa pagara a %d empleado(s) la cantidad de %d: ", n, conceptoHoras);
+    else
+        printf("No hay horas extra que pagar");
+}
+
 main(){
     menu();
 }
