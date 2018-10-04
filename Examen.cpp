@@ -217,6 +217,30 @@ void ejerSiete(){
     }while(opcion!=3);
 }
 
+void ejerOcho(){
+    int x=0, cont=0, total=0, minutos;
+    printf("\nPrueva de atletismo 5Km\n");
+    for (int i = 1; i < 11; ++i){
+        printf("Ingrese el tiempo del dia %d en minutos: ", i);
+        scanf("%d", &minutos);
+        total += minutos;
+        if (minutos<17)
+            cont++;
+        else
+            x++;
+    }
+    if (cont==10||x==1||(total/10<=15)){
+        printf("\n-El atleta es apto para la prueva de 5Km\n");
+        if (cont==10)
+            printf("-El atleta hizo un tiempo menor de 16 min en todas las pruevas.\n");
+        else
+            if (x==1)
+                printf("-En solo una de las pruevas realizo un tiempo mayor a 16 min.\n");
+    }else
+        printf("\nEl atleta no es apto para la prueva de 5Km\n");
+    printf("El promedio de tiempo de los 10 dias es de: %f\n", (float)total/10);
+}
+
 main(){
     menu();
 }
