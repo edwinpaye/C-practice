@@ -203,6 +203,20 @@ void incisoB(){
     printf("Coordenada polar: r= %d y alfa= %f\n", (xb+yb)/2, (atan(ya/xa)*180/PI));
 }
 
+void ejerSiete(){
+    int opcion;
+    do{
+        printf("\n---Menu---\n1.Inciso A\n2.Inciso B\n3.Salir\nElejir opcion: ");
+        scanf("%d", &opcion);
+        switch(opcion){
+            case 1: incisoA(); break;
+            case 2: incisoB(); break;
+            case 3: break;
+            default: printf("Opcion no valida.\n"); break;
+        }
+    }while(opcion!=3);
+}
+
 main(){
     menu();
 }
