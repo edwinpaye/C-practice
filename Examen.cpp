@@ -241,6 +241,18 @@ void ejerOcho(){
     printf("El promedio de tiempo de los 10 dias es de: %f\n", (float)total/10);
 }
 
+void ejerNueve(){
+    int n, auxiliar=2, auxiliarDos=2;
+    printf("Ingrese la cantidad para la serie: ");
+    scanf("%d", &n);
+    for(int i=0; i<n; ++i){
+        auxiliarDos += 2;
+        auxiliar += auxiliarDos;
+        printf("%d,", auxiliar);
+    }
+    printf("\n");
+}
+
 main(){
     menu();
 }
