@@ -190,6 +190,19 @@ void incisoA(){
         printf("No hay horas extra que pagar");
 }
 
+void incisoB(){
+    int xa, ya, xb, yb;
+    printf("Ingrese la coordenada x1: ");
+    scanf("%d", &xa);
+    printf("Ingrese la coordenada y1: ");
+    scanf("%d", &ya);
+    printf("Ingrese la coordenada x2: ");
+    scanf("%d", &xb);
+    printf("Ingrese la coordenada y2: ");
+    scanf("%d", &yb);
+    printf("Coordenada polar: r= %d y alfa= %f\n", (xb+yb)/2, (atan(ya/xa)*180/PI));
+}
+
 main(){
     menu();
 }
