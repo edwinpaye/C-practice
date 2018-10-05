@@ -56,6 +56,31 @@ void ejercicioDos(){
     cout<<"Trica en el turno: "<<contador<<endl;
 }
 
+/*lanzar tres cartas, el primero y segundo de 1 al 14 el tercero de 0 a 14
+el juego termina cuando se forma una trica, considerar a la tercera carta como
+comodin cuando obtenga el valor de 0*/
+
+void ejercicioTres(){
+    srand(time(NULL));
+    int cartA, cartB, cartC, contador=0;
+    bool validador = true;
+    while(validador){
+        cartA = aleatorio(1, 6);
+        cartB = aleatorio(1, 6);
+        cartC = aleatorio(0, 6);
+        contador++;
+        if(cartA==cartB&&(cartC==0||cartA==cartC)){
+            cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+            validador = false;
+        }else
+            cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+    }
+    if(cartC==0)
+        cout<<"Par y comodin en el turno: "<<contador<<endl;
+    else
+        cout<<"Trica en el turno: "<<contador<<endl;
+}
+
 main(){
     menuJuegos();
 }
