@@ -92,6 +92,33 @@ bool auxiliar(int intento, string jugador){
     return true;
 }
 
+void ejercicioCuatro(){
+    srand(time(NULL));
+    int contadorA=0, contadorB=0;
+    bool jugadorA = true, jugadorB = true;
+    while(jugadorA||jugadorB){
+        if(jugadorA){
+            contadorA++;
+            jugadorA = auxiliar(contadorA, "Jugador Uno");
+        }
+        if(jugadorB){
+            contadorB++;
+            jugadorB = auxiliar(contadorB, "Jugador Dos");
+        }
+    }
+    if(contadorA==contadorB)
+        cout<<"Empate en el turno "<<contadorA<<endl;
+    else{
+        if(contadorA<contadorB){
+            cout<<"Gana el jugador Uno con "<<contadorA<<" intentos."<<endl;
+            cout<<"El jugador Dos con "<<contadorB<<" intentos."<<endl;
+        }else{
+            cout<<"Gana el jugador Dos con "<<contadorB<<" intentos."<<endl;
+            cout<<"El jugador Uno con "<<contadorA<<" intentos."<<endl;
+        }
+    }
+}
+
 main(){
     menuJuegos();
 }
