@@ -81,6 +81,17 @@ void ejercicioTres(){
         cout<<"Trica en el turno: "<<contador<<endl;
 }
 
+bool auxiliar(int intento, string jugador){
+    int cartA, cartB, cartC;
+        cartA = aleatorio(1, 6);
+        cartB = aleatorio(1, 6);
+        cartC = aleatorio(0, 6);
+        cout<<intento<<". "<<jugador<<": "<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+        if(cartA==cartB&&(cartC==0||cartA==cartC))
+            return false;
+    return true;
+}
+
 main(){
     menuJuegos();
 }
