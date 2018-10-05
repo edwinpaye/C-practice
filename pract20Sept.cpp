@@ -38,6 +38,24 @@ void ejercicioUno(){
     cout<<"El dado es: "<<dado<<", con "<<contador<<" intento(s)."<<endl;
 }
 
+void ejercicioDos(){
+    srand(time(NULL));
+    int dadoA, dadoB, dadoC, contador=0;
+    bool validador = true;
+    while(validador){
+        dadoA = aleatorio(1, 6);
+        dadoB = aleatorio(1, 6);
+        dadoC = aleatorio(1, 6);
+        contador++;
+        if(dadoA==dadoB&&dadoA==dadoC){
+            cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+            validador = false;
+        }else
+            cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+    }
+    cout<<"Trica en el turno: "<<contador<<endl;
+}
+
 main(){
     menuJuegos();
 }
