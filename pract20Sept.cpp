@@ -134,6 +134,23 @@ void ejmSwitch(){
         default: cout<<"Opcion fuera de rango"<<endl; break;
     }
 }
+//Menu de juegos
+void menuJuegos(){
+    int x;
+    do{
+        cout<<"MENU JUEGOS"<<endl;
+        cout<<"1. Juego Uno."<<endl;
+        cout<<"2. Juego Dos."<<endl;
+        cout<<"3. Salir."<<endl;
+        cout<<"Elija opcion: ";
+        cin>>x;
+        switch(x){
+            case 1: ejercicioDos(); break;
+            case 2: ejercicioCuatro(); break;
+            default: cout<<"Opcion fuera de rango"<<endl; break;
+        }
+    }while(x!=3);
+}
 
 main(){
     menuJuegos();
