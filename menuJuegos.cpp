@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -11,11 +12,11 @@ int aleatorio(int limite_inferior, int limite_superior){
 void ejercicio(){
     int dado, n;
     printf("Ingrese cantidad de lanzamientos: ");
-    scanf("%d", n);
+    scanf("%d", &n);
     srand(time(NULL));
     for(int c=1;c<=n;c++){
         dado = aleatorio(1, 6);
-        cout<<dado<<'\t';
+        printf("%d\t", dado);
     }
 }
 
