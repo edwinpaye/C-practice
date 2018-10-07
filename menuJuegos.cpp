@@ -125,14 +125,14 @@ void ejmSwitch(){
     cout<<"Elegir opcion: ";
     cin>>x;
     switch(x){
-        case 1: cout<<"Lunes"<<endl; break;
-        case 2: cout<<"Martes"<<endl; break;
-        case 3: cout<<"Miercoles"<<endl; break;
-        case 4: cout<<"Jueves"<<endl; break;
-        case 5: cout<<"Viernes"<<endl; break;
-        case 6: cout<<"Sabado"<<endl; break;
-        case 7: cout<<"Domingo"<<endl; break;
-        default: cout<<"Opcion fuera de rango"<<endl; break;
+        case 1: printf("Lunes\n"); break;
+        case 2: printf("Martes\n"); break;
+        case 3: printf("Miercoles\n"); break;
+        case 4: printf("Jueves\n"); break;
+        case 5: printf("Viernes\n"); break;
+        case 6: printf("Sabado\n"); break;
+        case 7: printf("Domingo\n"); break;
+        default: printf("Opcion fuera de rango\n"); break;
     }
 }
 
