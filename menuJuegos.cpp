@@ -10,8 +10,8 @@ int aleatorio(int limite_inferior, int limite_superior){
 
 void ejercicio(){
     int dado, n;
-    cout << "Ingrese cantidad de lanzamientos: ";
-    cin>>n;
+    printf("Ingrese cantidad de lanzamientos: ");
+    scanf("%d", n);
     srand(time(NULL));
     for(int c=1;c<=n;c++){
         dado = aleatorio(1, 6);
