@@ -33,10 +33,10 @@ void ejercicioUno(){
         dado = aleatorio(1, 6);
         contador++;
         if(dado%2!=0)
-            cout<<dado<<endl;
+            printf("%d\n", dado);
     }
-    cout<<dado<<endl;
-    cout<<"El dado es: "<<dado<<", con "<<contador<<" intento(s)."<<endl;
+    printf("%d\n", dado);
+    printf("El dado es: %d, con%d intento(s).\n", dado, contador);
 }
 
 void ejercicioDos(){
