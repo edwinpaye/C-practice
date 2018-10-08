@@ -121,8 +121,10 @@ void ejercicioCuatro(){
 
 void ejmSwitch(){
     int x;
-    cout<<"Elegir opcion: ";
-    cin>>x;
+    printf("Elegir opcion: ");
+    // cout<<"Elegir opcion: ";
+    scanf("%d", &x);
+    // cin>>x;
     switch(x){
         case 1: printf("Lunes\n"); break;
         case 2: printf("Martes\n"); break;
