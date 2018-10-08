@@ -82,7 +82,7 @@ bool auxiliar(int intento, string jugador){
         cartA = aleatorio(1, 6);
         cartB = aleatorio(1, 6);
         cartC = aleatorio(0, 6);
-        cout<<intento<<". "<<jugador<<": "<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+        printf("%d. %s: %d - %d - %d\n", intento, jugador.c_str(), cartA, cartB, cartC);
         if(cartA==cartB&&(cartC==0||cartA==cartC))
             return false;
     return true;
