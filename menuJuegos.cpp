@@ -48,11 +48,11 @@ void ejercicioDos(){
         dadoB = aleatorio(1, 6);
         dadoC = aleatorio(1, 6);
         contador++;
-        if(dadoA==dadoB&&dadoA==dadoC){
-            cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+        cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+        if(dadoA==dadoB&&dadoA==dadoC)
             validador = false;
-        }else
-            cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+        // else
+            // cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
     }
     cout<<"Trica en el turno: "<<contador<<endl;
 }
