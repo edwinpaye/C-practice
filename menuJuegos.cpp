@@ -1,6 +1,6 @@
-#include <iostream>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream> //using std
+#include <stdlib.h>  //method rand()
+#include <time.h> //metho time()
 #include <stdio.h>
 
 using namespace std;
@@ -66,7 +66,6 @@ void ejercicioTres(){
         cartB = aleatorio(1, 6);
         cartC = aleatorio(0, 6);
         contador++;
-        // cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
         printf("%d - %d - %d\n", cartA, cartB, cartC);
         if(cartA==cartB&&(cartC==0||cartA==cartC))
             validador = false;
@@ -107,14 +106,10 @@ void ejercicioCuatro(){
     else{
         if(contadorA<contadorB){
             printf("Gana el jugador Uno con %d intentos.\n", contadorA);
-            // cout<<"Gana el jugador Uno con "<<contadorA<<" intentos."<<endl;
             printf("El jugador Dos con %d intentos.\n", contadorB);
-            // cout<<"El jugador Dos con "<<contadorB<<" intentos."<<endl;
         }else{
             printf("Gana el jugador Dos con %d intentos.\n", contadorB);
-            // cout<<"Gana el jugador Dos con "<<contadorB<<" intentos."<<endl;
             printf("El jugador Uno con %d intentos.\n", contadorA);
-            // cout<<"El jugador Uno con "<<contadorA<<" intentos."<<endl;
         }
     }
 }
@@ -122,9 +117,7 @@ void ejercicioCuatro(){
 void ejmSwitch(){
     int x;
     printf("Elegir opcion: ");
-    // cout<<"Elegir opcion: ";
     scanf("%d", &x);
-    // cin>>x;
     switch(x){
         case 1: printf("Lunes\n"); break;
         case 2: printf("Martes\n"); break;
