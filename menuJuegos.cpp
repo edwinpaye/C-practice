@@ -41,20 +41,16 @@ void ejercicioUno(){
 
 void ejercicioDos(){
     srand(time(NULL));
-    int dadoA, dadoB, dadoC, contador=0;
+    int dadoA=1, dadoB=0, dadoC=0, contador=0;
     bool validador = true;
-    while(validador){
+    while(dadoA!=dadoB||dadoA!=dadoC){
         dadoA = aleatorio(1, 6);
         dadoB = aleatorio(1, 6);
         dadoC = aleatorio(1, 6);
         contador++;
-        cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
-        if(dadoA==dadoB&&dadoA==dadoC)
-            validador = false;
-        // else
-            // cout<<dadoA<<" - "<<dadoB<<" - "<<dadoC<<endl;
+        printf("%d - %d - %d\n", dadoA, dadoB, dadoC);
     }
-    cout<<"Trica en el turno: "<<contador<<endl;
+    printf("Trica en el turno: %d\n", contador);
 }
 
 /*lanzar tres cartas, el primero y segundo de 1 al 14 el tercero de 0 a 14
@@ -143,7 +139,7 @@ void menuJuegos(){
         printf("\n---* MENU JUEGOS *---\n1. Juego Uno.\n2. Juego Dos.\n3. Salir.\nElejir opcion: ");
         scanf("%d", &x);
         switch(x){
-            case 1: ejercicioTres(); break;
+            case 1: ejercicioDos(); break;
             case 2: ejercicioCuatro(); break;
             case 3: printf("Hasta luego...\n"); break;
             default: printf("Opcion fuera de rango\n"); break;
