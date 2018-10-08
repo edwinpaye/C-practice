@@ -103,14 +103,18 @@ void ejercicioCuatro(){
         }
     }
     if(contadorA==contadorB)
-        cout<<"Empate en el turno "<<contadorA<<endl;
+        printf("Empate en el turno %d\n", contadorA);
     else{
         if(contadorA<contadorB){
-            cout<<"Gana el jugador Uno con "<<contadorA<<" intentos."<<endl;
-            cout<<"El jugador Dos con "<<contadorB<<" intentos."<<endl;
+            printf("Gana el jugador Uno con %d intentos.\n", contadorA);
+            // cout<<"Gana el jugador Uno con "<<contadorA<<" intentos."<<endl;
+            printf("El jugador Dos con %d intentos.\n", contadorB);
+            // cout<<"El jugador Dos con "<<contadorB<<" intentos."<<endl;
         }else{
-            cout<<"Gana el jugador Dos con "<<contadorB<<" intentos."<<endl;
-            cout<<"El jugador Uno con "<<contadorA<<" intentos."<<endl;
+            printf("Gana el jugador Dos con %d intentos.\n", contadorB);
+            // cout<<"Gana el jugador Dos con "<<contadorB<<" intentos."<<endl;
+            printf("El jugador Uno con %d intentos.\n", contadorA);
+            // cout<<"El jugador Uno con "<<contadorA<<" intentos."<<endl;
         }
     }
 }
