@@ -66,16 +66,15 @@ void ejercicioTres(){
         cartB = aleatorio(1, 6);
         cartC = aleatorio(0, 6);
         contador++;
-        if(cartA==cartB&&(cartC==0||cartA==cartC)){
-            cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+        // cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
+        printf("%d - %d - %d\n", cartA, cartB, cartC);
+        if(cartA==cartB&&(cartC==0||cartA==cartC))
             validador = false;
-        }else
-            cout<<cartA<<" - "<<cartB<<" - "<<cartC<<endl;
     }
     if(cartC==0)
-        cout<<"Par y comodin en el turno: "<<contador<<endl;
+        printf("Par y comodin en el tuno: %d\n", contador);
     else
-        cout<<"Trica en el turno: "<<contador<<endl;
+        printf("Trica en el turno: %d\n", contador);
 }
 
 bool auxiliar(int intento, string jugador){
@@ -139,7 +138,7 @@ void menuJuegos(){
         printf("\n---* MENU JUEGOS *---\n1. Juego Uno.\n2. Juego Dos.\n3. Salir.\nElejir opcion: ");
         scanf("%d", &x);
         switch(x){
-            case 1: ejercicioDos(); break;
+            case 1: ejercicioTres(); break;
             case 2: ejercicioCuatro(); break;
             case 3: printf("Hasta luego...\n"); break;
             default: printf("Opcion fuera de rango\n"); break;
